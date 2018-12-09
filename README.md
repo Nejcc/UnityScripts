@@ -9,7 +9,7 @@ if( hit.transform.gameObject.tag == "Interact"){
 ```
 ## Get dropdown in inspector
 ```cs
-	private enum Colony {Forest,Grassland,Housing};
+public enum TileSetType {Forest,Grassland,Housing};
 
-	[SerializeField] public Colony tileType;
+[SerializeField] public TileSetType tileType;
 ```
