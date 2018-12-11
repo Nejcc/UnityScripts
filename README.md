@@ -16,6 +16,8 @@ public enum TileSetType {Forest,Grassland,Housing};
 
 ## Spawn items in the world with X and z cordinats
 ```cs
+private Dictionary<HexTile , GameObject> hexToGameObjectMap;
+
 public void SpawnUnitAt(GameObject PlayerUnitPrefab, int q, int r)
 {
   GameObject myHex = hexToGameObjectMap[GetHexAt(q,r)];
