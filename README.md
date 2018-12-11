@@ -13,3 +13,13 @@ public enum TileSetType {Forest,Grassland,Housing};
 
 [SerializeField] public TileSetType tileType;
 ```
+
+## Spawn items in the world with X and z cordinats
+```cs
+public void SpawnUnitAt(GameObject PlayerUnitPrefab, int q, int r)
+{
+  GameObject myHex = hexToGameObjectMap[GetHexAt(q,r)];
+  //Spawn player in
+  Instantiate(PlayerUnitPrefab, myHex.transform.position, Quaternion.identity, myHex.transform);
+}
+```
